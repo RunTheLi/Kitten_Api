@@ -23,6 +23,11 @@
   </head>
 
   <body>
+    <% flash.each do |type, message| %>
+  <div style="padding: 10px; border: 1px solid #ccc; margin-bottom: 10px; background-color: <%= type == 'notice' ? '#e0ffe0' : '#ffe0e0' %>;">
+    <strong><%= message %></strong>
+  </div>
+<% end %>
     <%= yield %>
   </body>
 </html>
